@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prière</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+            direction: rtl;
+            font-size: 24px;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        .date {
+            margin-top: 20px;
+            font-size: 16px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>أنا أتوب توبة نصوحا و إن عدت لهذا الذنب الذي فعلته اليوم و أنا جد نادم و غاضب ياربي إغفر لي و سامحيني فالشيطان كان سبب لي اللهم إغفر لي و اعفو عني</p>
+        <div class="date" id="date"></div>
+    </div>
+
+    <script>
+        const today = new Date();
+        const dateElement = document.getElementById("date");
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = today.toLocaleDateString('ar-MA', options);
+    </script>
+</body>
+</html>
